@@ -1,5 +1,6 @@
 const gridContainer = document.getElementById("gridContainer");
 var rows = document.getElementsByClassName("gridRow");
+var gridBox = document.querySelectorAll(".gridBox");
 
 function makeGrid() {
     makeRows(15);
@@ -29,3 +30,9 @@ function makeColumns(columnNum) {
 }
 
 makeGrid();
+
+gridContainer.addEventListener('mouseover', function (e) {
+    if (e.target.matches('.gridBox')) {
+        e.target.classList.add('gridColored');
+      }
+});
