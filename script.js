@@ -2,8 +2,12 @@ const gridContainer = document.getElementById("gridContainer");
 var rows = document.getElementsByClassName("gridRow");
 
 function makeGrid() {
-    makeRows(16);
+    makeRows(15);
     makeColumns(16);
+    //Adds missing grid box in the bottom right corner
+    var extra = document.createElement("div");
+    extra.classList.add("gridBox");
+    gridContainer.appendChild(extra);
 }
 
 function makeRows(rowNum) {
