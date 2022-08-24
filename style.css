@@ -1,10 +1,14 @@
 #gridContainer {
-    display: flex;
+    background-color: aqua;
+    font-size: 0px;
+    width: 700px;
 }
 
 .gridBox {
-    flex: 1;
+    display: inline-block;
     border-style: solid;
     border-width: 0.5px;
-    padding: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
 }
