@@ -3,10 +3,6 @@ var rows = document.getElementsByClassName("gridRow");
 var gridBox = document.querySelectorAll(".gridBox");
 var sizeButtons = document.querySelectorAll(".btns");
 
-/* size classes
-exSmall  small  medium  large  exLarge
-*/
-
 function makeGrid() {
     makeRows();
     makeColumns();
