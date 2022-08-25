@@ -2,9 +2,20 @@ const gridContainer = document.getElementById("gridContainer");
 var rows = document.getElementsByClassName("gridRow");
 var gridBox = document.querySelectorAll(".gridBox");
 
+//slider
+var slider = document.getElementById("range");
+var output = document.getElementById("canvasSize");
+output.innerHTML = slider.value;
+gridSize = slider.value
+
+slider.oninput = function() {
+  output.innerHTML = this.value;
+}
+
+
 function makeGrid() {
-    makeRows(15);
-    makeColumns(16);
+    makeRows(gridSize);
+    makeColumns(gridSize);
     //Adds missing grid box in the bottom right corner
     var extra = document.createElement("div");
     extra.classList.add("gridBox");
