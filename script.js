@@ -1,15 +1,17 @@
 const gridContainer = document.getElementById("gridContainer");
 var rows = document.getElementsByClassName("gridRow");
 var gridBox = document.querySelectorAll(".gridBox");
+var sizeButtons = document.querySelectorAll(".btns");
+
+/* size classes
+exSmall  small  medium  large  exLarge
+*/
 
 function makeGrid() {
-    makeRows(15);
-    makeColumns(16);
-    //Adds missing grid box in the bottom right corner
-    var extra = document.createElement("div");
-    extra.classList.add("gridBox");
-    gridContainer.appendChild(extra);
+    makeRows();
+    makeColumns();
 }
+
 
 function makeRows(rowNum) {
     for (r = 0; r < rowNum; r++) {
@@ -29,11 +31,10 @@ function makeColumns(columnNum) {
     }
 }
 
-makeGrid();
-
 gridContainer.addEventListener('mouseover', function (e) {
     if (e.target.matches('.gridBox')) {
         e.target.classList.add('gridColored');
       }
 });
 
+makeGrid(); 
